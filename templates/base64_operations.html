@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder/Decoder</title>
+    <link rel="stylesheet" href="static/css/base64_operations.css">
+</head>
+<body>
+    <h1>Base64 Encoder/Decoder</h1>
+
+    <form method="post">
+        <label for="input_text">Enter text:</label>
+        <textarea name="input_text" id="input_text" rows="4" cols="50" required></textarea><br>
+        <label for="operation">Select operation:</label>
+        <select name="operation" id="operation">
+            <option value="encode">Encode</option>
+            <option value="decode">Decode</option>
+        </select><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if encoded_result %}
+        <h2>Encoded Result:</h2>
+        <form>
+        <div class="result">{{ encoded_result }}</div>
+        <button onclick="copyToClipboard('{{ encoded_result }}')">Copy</button>
+    </form>
+    {% endif %}
+
+    {% if decoded_result %}
+        <h2>Decoded Result:</h2>
+        <form>
+        <div class="result">{{ decoded_result }}</div>
+        <button onclick="copyToClipboard('{{ decoded_result }}')">Copy</button>
+    </form>
+    {% endif %}
+
+    <script>
+        function copyToClipboard(text) {
+            // Create a temporary textarea element
+            var textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+
+            // Select and copy the text from the textarea
+            textarea.select();
+            document.execCommand("copy");
+
+            // Remove the temporary textarea
+            document.body.removeChild(textarea);
+
+            alert("Result copied to clipboard:\n" + text);
+        }
+    </script>
+
+</body>
+</html>
