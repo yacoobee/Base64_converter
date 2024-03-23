@@ -16,7 +16,7 @@ Windows CMD `venv\Scripts\activate`
 In venv download flask:
 `pip install -r requirements.txt`
 
-Run App `Python app.py`
+Run App `python app.py`
 
 Flask server should start
 Follow a link or open browser on `http://localhost:8082`
