@@ -2,7 +2,7 @@
 Simple Python Flask Web Base64 Converter
 
 # Instalation
-Install Python
+Install Python 3
 
 Create virtual environment in project folder:
 `python -m venv venv`
