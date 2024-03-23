@@ -8,7 +8,9 @@ Create virtual environment in project folder:
 `python -m venv venv`
 
 Activate venv
+
 MAC Terminal `venv/bin/activate`
+
 Windows CMD `venv\Scripts\activate`
 
 In venv download flask:
