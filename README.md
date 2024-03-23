@@ -20,4 +20,4 @@ Run App `python app.py`
 
 Flask server should start
 
-Follow a link or open browser on `http://localhost:8082`
+Follow a link or open a browser on `http://localhost:8082`
